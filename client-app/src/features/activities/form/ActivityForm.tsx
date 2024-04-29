@@ -45,7 +45,7 @@ export default observer(function ActivityForm() {
     if (loadingInitial) return <LoadingComponent content='Loading activity...' />
 
     return (
-        <Segment clearing>
+        <Segment inverted textAlign='center' vertical className='masthead' >
             <Form onSubmit={handleSubmit} autoComplete='off'>
                 <Form.Input placeholder='Title' value={activity.title} name='title' onChange={handleInputChange} />
                 <Form.TextArea placeholder='Description' value={activity.description} name='description' onChange={handleInputChange} />
