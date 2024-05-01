@@ -1,16 +1,17 @@
 using API.Extensions;
-using Application.Activities;
-using Application.Core;
+using API.Middleware;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
- // Add services to the container.
+// Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddApplicationServices(builder.Configuration);
 
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
