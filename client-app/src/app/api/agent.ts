@@ -16,7 +16,7 @@ axios.defaults.baseURL = 'http://localhost:5000/api';
 const responseBody = <T>(response: AxiosResponse<T>) => response.data;
 
 axios.interceptors.response.use(async response => {
-    await sleep(1000);
+    await sleep(500);
     return response;
 }, (error: AxiosError) => {
     const { data, status, config } = error.response as AxiosResponse;
