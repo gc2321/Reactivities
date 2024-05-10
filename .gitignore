@@ -4,6 +4,7 @@
 ## Get latest from `dotnet new gitignore`
 
 appsettings.json
+_README.txt
 
 # dotenv files
 .env
@@ -40,7 +41,7 @@ bld/
 # Visual Studio 2015/2017 cache/options directory
 .vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
-#wwwroot/
+wwwroot/
 
 # Visual Studio 2017 auto generated files
 Generated\ Files/
